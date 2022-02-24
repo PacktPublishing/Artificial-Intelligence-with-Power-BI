@@ -3,8 +3,8 @@ from azure.cognitiveservices.vision.computervision import ComputerVisionClient
 from msrest.authentication import CognitiveServicesCredentials
 
 # Connect to API through subscription key and endpoint
-subscription_key = "17666311c45f4ac9b2bfbf59ec7b479f"
-endpoint = "https://cogser-pbi.cognitiveservices.azure.com/"
+subscription_key = "<your-subscription-key>"
+endpoint = "https://<your-cognitive-service>.cognitiveservices.azure.com/"
 
 # Authenticate
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))

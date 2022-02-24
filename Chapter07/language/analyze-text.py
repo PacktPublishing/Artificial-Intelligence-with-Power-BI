@@ -4,8 +4,8 @@ from azure.core.credentials import AzureKeyCredential
 from azure.ai.textanalytics import TextAnalyticsClient
 
 # Connect to API through subscription key and endpoint
-subscription_key = "17666311c45f4ac9b2bfbf59ec7b479f"
-endpoint = "https://cogser-pbi.cognitiveservices.azure.com/"
+subscription_key = "<your-subscription-key>"
+endpoint = "https://<your-cognitive-service>.cognitiveservices.azure.com/"
 
 # Authenticate
 credential = AzureKeyCredential(subscription_key)
