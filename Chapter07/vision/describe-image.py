@@ -10,7 +10,7 @@ endpoint = "https://<your-cognitive-service>.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
 # Get image
-local_image = open("images/street1.jpeg", "rb")
+local_image = open("images/street.jpeg", "rb")
 
 # Call API
 description_result = computervision_client.describe_image_in_stream(local_image)

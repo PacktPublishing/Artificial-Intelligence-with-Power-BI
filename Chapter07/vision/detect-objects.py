@@ -10,7 +10,7 @@ endpoint = "https://<your-cognitive-service>.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(endpoint, CognitiveServicesCredentials(subscription_key))
 
 # Get image
-local_image = open("images/objects6.jpeg", "rb")
+local_image = open("images/objects.jpeg", "rb")
 
 # Call API
 detect_objects_results_local = computervision_client.detect_objects_in_stream(local_image)
@@ -21,5 +21,5 @@ if len(detect_objects_results_local.objects) == 0:
     print("No objects detected.")
 else:
     for object in detect_objects_results_local.objects:
-        print(object.object_property, object.confidence)
+        print("'{}' with confidence {:.2f}%".format(object.object_property, object.confidence * 100))
 print()
